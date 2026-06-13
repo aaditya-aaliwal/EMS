@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/attendance";
+const API_URL = "https://ems-backend-x6nb.onrender.com/attendance";
 
 export const markAttendance = async (
   employee_id: number

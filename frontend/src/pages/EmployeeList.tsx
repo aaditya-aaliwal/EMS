@@ -21,14 +21,14 @@ function EmployeeList() {
     const [departmentName, setDepartmentName] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:3000/employees")
+        fetch("https://ems-backend-x6nb.onrender.com/employees")
             .then((res) => res.json())
             .then((data) => setEmployees(data))
             .catch((err) => console.error(err));
 
         if (departmentId) {
             fetch(
-                `http://localhost:3000/departments/${departmentId}`
+                `https://ems-backend-x6nb.onrender.com/departments/${departmentId}`
             )
                 .then((res) => res.json())
                 .then((data) =>
@@ -51,7 +51,7 @@ function EmployeeList() {
 
         try {
             const response = await fetch(
-                `http://localhost:3000/employees/${id}`,
+                `https://ems-backend-x6nb.onrender.com/employees/${id}`,
                 {
                     method: "DELETE",
                 }
@@ -295,7 +295,7 @@ function EmployeeList() {
                     setShowModal(false);
                     setSelectedEmployee(null);
 
-                    fetch("http://localhost:3000/employees")
+                    fetch("https://ems-backend-x6nb.onrender.com/employees")
                         .then((res) => res.json())
                         .then((data) => setEmployees(data));
                 }}

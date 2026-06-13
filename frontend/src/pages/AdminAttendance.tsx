@@ -18,7 +18,7 @@ export default function AdminAttendance() {
     const loadAttendance = async () => {
         try {
             const response = await fetch(
-                "http://localhost:3000/attendance"
+                "https://ems-backend-x6nb.onrender.com/attendance"
             );
 
             const data = await response.json();

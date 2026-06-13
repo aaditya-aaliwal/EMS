@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/leaves";
+const API_URL = "https://ems-backend-x6nb.onrender.com/leaves";
 
 export const applyLeave = async (data: any) => {
   const response = await axios.post(API_URL, data);

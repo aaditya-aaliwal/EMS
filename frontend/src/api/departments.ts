@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/departments";
+const API_URL = "https://ems-backend-x6nb.onrender.com/departments";
 
 const getAuthHeader = () => ({
     headers: {

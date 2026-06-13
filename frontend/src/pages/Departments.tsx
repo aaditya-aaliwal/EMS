@@ -17,7 +17,7 @@ function Departments() {
     useEffect(() => {
         fetchDepartments();
 
-        fetch("http://localhost:3000/employees")
+        fetch("https://ems-backend-x6nb.onrender.com/employees")
             .then((res) => res.json())
             .then((data) => setEmployees(data))
             .catch((err) => console.error(err));

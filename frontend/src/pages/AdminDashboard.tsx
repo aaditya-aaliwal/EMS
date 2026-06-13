@@ -17,7 +17,7 @@ function AdminDashboard() {
   const [pendingLeaves, setPendingLeaves] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:3000/employees")
+    fetch("https://ems-backend-x6nb.onrender.com/employees")
       .then((res) => res.json())
       .then((data) => {
         setEmployeeCount(data.length);
@@ -26,7 +26,7 @@ function AdminDashboard() {
         console.error("Error fetching employees:", err);
       });
 
-    fetch("http://localhost:3000/attendance")
+    fetch("https://ems-backend-x6nb.onrender.com/attendance")
       .then((res) => res.json())
       .then((data) => {
         const today = new Date().toISOString().split("T")[0];
@@ -42,7 +42,7 @@ function AdminDashboard() {
         console.error("Error fetching attendance:", err);
       });
 
-    fetch("http://localhost:3000/departments")
+    fetch("https://ems-backend-x6nb.onrender.com/departments")
       .then((res) => res.json())
       .then((data) => {
         setDepartmentCount(data.length);
@@ -51,7 +51,7 @@ function AdminDashboard() {
         console.error("Error fetching departments:", err);
       });
 
-    fetch("http://localhost:3000/leaves")
+    fetch("https://ems-backend-x6nb.onrender.com/leaves")
       .then((res) => res.json())
       .then((data) => {
         const pending = data.filter(

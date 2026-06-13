@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/employees";
+const API_URL = "https://ems-backend-x6nb.onrender.com/employees";
 
 export const getEmployeeProfile = async (
     userId: number

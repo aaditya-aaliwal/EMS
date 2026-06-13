@@ -82,7 +82,7 @@ console.log("isEdit:", isEdit);
             setLoading(true);
             if (isEdit) {
                 const response = await fetch(
-                    `http://localhost:3000/employees/${employee.id}`,
+                    `https://ems-backend-x6nb.onrender.com/employees/${employee.id}`,
                     {
                         method: "PUT",
                         headers: {
@@ -122,7 +122,7 @@ console.log("isEdit:", isEdit);
                 Date.now().toString().slice(-4);
 
             const registerResponse = await fetch(
-                "http://localhost:3000/auth/register",
+                "https://ems-backend-x6nb.onrender.com/auth/register",
                 {
                     method: "POST",
                     headers: {
@@ -144,7 +144,7 @@ console.log("isEdit:", isEdit);
             const createdUser = await registerResponse.json();
 
             const response = await fetch(
-                "http://localhost:3000/employees",
+                "https://ems-backend-x6nb.onrender.com/employees",
                 {
                     method: "POST",
                     headers: {
