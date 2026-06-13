@@ -23,6 +23,9 @@ import { LeavesModule } from './leaves/leaves.module';
       database: process.env.DB_NAME,
       autoLoadEntities: true,
       synchronize: false,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
 
     DepartmentsModule,
@@ -38,4 +41,4 @@ import { LeavesModule } from './leaves/leaves.module';
     LeavesModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }
